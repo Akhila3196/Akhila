@@ -1,0 +1,64 @@
+﻿<html>
+<head>
+    <style>
+        body {
+            background-image: url(beauty.jpg);
+        }
+    </style>
+</head>
+<body>
+    <?php
+    $name==$password="";
+    $nameErr=$passwordErr="";
+    if($_SERVER["REQUEST_METHOD"]=="POST")
+    {
+    if(empty($-post["name"])
+    {
+    $nameerr="name is required";
+    }else{
+    $name=$-post["name"];
+    }
+    if(!empty($_POST["password"]))
+    {
+    $passworderr="password is required";
+    }else{
+    $password=$-post["password"];
+    }
+    if($_POST["password"]>5)
+    {
+    echo "valid";
+    }
+    else
+    {
+    echo "invalid";
+    }
+    }
+    echo $name;
+    echo $password;
+  
+    ?>
+    <body>
+        <nav class="navbar">
+            <div class="container">
+            <a class="nav-item nav-link" href="#">Home</a>
+            <a class="nav-item nav-link" href="#">gallery</a>
+            <a class="nav-item nav-link" href="#">aboutus</a>
+            <a class="nav-item nav-link" href="#">contactus</a>
+            </div>
+        </nav>
+        <form action="welcome.php" method="post">
+            name:<input type="text" name="name"/>
+            password:<input type="password" name="pass"/>
+            <input type="submit" value="submit"/>
+        </form>
+        <form method="post" action="<? php echo $server ['php-self']"; ?>
+            name:<input type="text" name="name"="name"/>
+            <span class="error">*<? php echo $name err; ?></span>
+            <br/>
+            password:<input type="password" name="pass"/>
+            <span class="error">*<? php echo $nameerror ; ?></span>
+            <br/>
+            <input type="submit" value="submit"/>
+        </form>
+    </body>
+</html>
